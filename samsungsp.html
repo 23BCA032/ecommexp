@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung S25 Ultra Specifications</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .spec-section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Needed for animation clipping */
+        }
+        .spec-section h2{
+            color: #007bff; /* Example color */
+        }
+
+        .spec-item {
+            margin-bottom: 10px;
+        }
+
+        .spec-label {
+            font-weight: bold;
+            width: 150px; /* Adjust width as needed */
+            display: inline-block;
+        }
+
+        .spec-value {
+          display: inline-block;
+        }
+        .phone-image{
+            max-width: 100%;
+            height: auto;
+        }
+        /* Basic Animation */
+        .spec-section {
+          opacity: 0; /* Initially hidden */
+          transform: translateY(20px); /* Move it down slightly */
+          transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+        }
+
+        .spec-section.visible {
+          opacity: 1; /* Show it */
+          transform: translateY(0); /* Move back to original position */
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <h1 class="animate__animated animate__fadeInDown">Samsung Galaxy S25 Ultra</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <img src="placeholder_phone.jpg" alt="Samsung S25 Ultra" class="phone-image animate__animated animate__zoomIn">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <div class="spec-section" id="display-section">
+                    <h2>Display</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">Size:</span><span class="spec-value">7.0-inch Dynamic AMOLED 2X, 120Hz adaptive refresh rate</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Resolution:</span><span class="spec-value">3200 x 1440 pixels (525 ppi)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Protection:</span><span class="spec-value">Corning Gorilla Glass Victus 4</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">HDR:</span><span class="spec-value">HDR10+</span>
+                    </div>
+                </div>
+
+                <div class="spec-section" id="camera-section">
+                    <h2>Camera</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">Main:</span><span class="spec-value">200MP Wide (f/1.8), OIS</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ultrawide:</span><span class="spec-value">12MP (f/2.2)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Telephoto:</span><span class="spec-value">10MP (f/2.4), 3x optical zoom, OIS</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Periscope Telephoto:</span><span class="spec-value">10MP (f/4.9), 10x optical zoom, OIS</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Front:</span><span class="spec-value">40MP (f/2.2)</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-label">Video:</span><span class="spec-value">8K@24fps, 4K@30/60fps, 1080p@30/60/240fps</span>
+                  </div>
+                </div>
+
+                <div class="spec-section" id="processor-section">
+                    <h2>Processor</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">CPU:</span><span class="spec-value">Octa-core Snapdragon 8 Gen 4 (or Exynos 2500, market dependent)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">GPU:</span><span class="spec-value">Adreno 830 (or Xclipse 940, market dependent)</span>
+                    </div>
+                </div>
+
+                <div class="spec-section" id="memory-section">
+                    <h2>Memory</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">RAM:</span><span class="spec-value">12GB / 16GB</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Storage:</span><span class="spec-value">256GB / 512GB / 1TB</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Expandable:</span><span class="spec-value">No</span>
+                    </div>
+                </div>
+
+                <div class="spec-section" id="battery-section">
+                    <h2>Battery</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">Capacity:</span><span class="spec-value">5000 mAh</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Charging:</span><span class="spec-value">65W Fast Charging, Wireless Charging</span>
+                    </div>
+                </div>
+
+                <div class="spec-section" id="software-section">
+                    <h2>Software</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">OS:</span><span class="spec-value">Android 14 with One UI 6</span>
+                    </div>
+                </div>
+
+                <div class="spec-section" id="connectivity-section">
+                    <h2>Connectivity</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">5G:</span><span class="spec-value">Yes</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Wi-Fi:</span><span class="spec-value">Wi-Fi 6E</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Bluetooth:</span><span class="spec-value">Bluetooth 5.3</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">USB:</span><span class="spec-value">USB Type-C</span>
+                    </div>
+                </div>
+
+                <div class="spec-section" id="other-section">
+                    <h2>Other Features</h2>
+                    <div class="spec-item">
+                        <span class="spec-label">Water Resistance:</span><span class="spec-value">IP68</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Fingerprint Sensor:</span><span class="spec-value">Ultrasonic in-display</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Speakers:</span><span class="spec-value">Stereo speakers tuned by AKG</span>
+                    </div>
+                </div>
+              
+
+            </div>
+          
+        </div>
+    </div>
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Basic animation on scroll
+        const sections = document.querySelectorAll('.spec-section');
+
+        function animateSections() {
+          sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * 0.8; // Adjust trigger point as needed
+
+            if (sectionTop < triggerPoint) {
+              section.classList.add('visible');
+            } else {
+              section.classList.remove('visible'); // Optional: Reset animation on scroll up
+            }
+          });
+        }
+
+        window.addEventListener('scroll', animateSections);
+        animateSections(); // Trigger animation on initial load
+    </script>
+
+</body>
+
+</html>

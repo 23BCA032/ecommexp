@@ -1,0 +1,202 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h2 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .line-through {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .rating {
+            color: yellow;
+        }
+        .add-to-cart {
+            margin-top: 10px;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart:hover {
+            background-color: darkblue;
+        }
+        .heart-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Buy Now</h1>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/TUI5oQiBo4qNDA1NNUuzyhZE5fnz433F-lnqdM71tUE.jpg" alt="Garmin Fenix 7X Solar">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Garmin Fenix 7X Solar</h2>
+                <p class="price">₹89,999.00 <span class="line-through">₹99,999.00</span></p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Garmin Fenix 7X Solar" data-price="89999">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/fi_43xwiyBjiAc5F62WbEfBg9mm-3g6m6kviz0ckUbw.jpg" alt="Samsung Galaxy Watch 6">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Samsung Galaxy Watch 6</h2>
+                <p class="price">₹34,999.00 <span class="line-through">₹39,999.00</span></p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Samsung Galaxy Watch 6" data-price="34999">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/zwxBUx-YgmW1Y6ZpaA2hA6UNkaVcXQ2UQU8ZwwwIL_o.jpg" alt="Apple Watch Ultra">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Apple Watch Ultra</h2>
+                <p class="price">₹89,900.00 <span class="line-through">₹99,900.00</span></p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Apple Watch Ultra" data-price="89900">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/22-3EojwJMH3LoeHkTLRkQGTCry8Fmlcj8HmuB6nzuw.jpg" alt="Amazfit GTR 4">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Amazfit GTR 4</h2>
+                <p class="price">₹17,999.00 <span class="line-through">₹19,999.00</span></p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Amazfit GTR 4" data-price="17999">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/EW6JgfcALTo8_CQp2FHe_u6K14uHd_CfkvmmTmgKJhE.jpg" alt="Fitbit Charge 5">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Fitbit Charge 5</h2>
+                <p class="price">₹14,999.00</p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Fitbit Charge 5" data-price="14999">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/a6CxWoLfjm7Pj4TBeRqQBipjO1gixOaj4DJCx3WLIPg.jpg" alt="Huawei Watch GT 3 Pro">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Huawei Watch GT 3 Pro</h2>
+                <p class="price">₹24,999.00</p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Huawei Watch GT 3 Pro" data-price="24999">Add to Cart</button>
+            </div>
+            <!-- Product 7 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/drweK__SRZkJfM-9E_shE6eUiigH3oyP47tXxYhPBZE.jpg" alt="Oppo Watch 2">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Oppo Watch 2</h2>
+                <p class="price">₹19,999.00</p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Oppo Watch 2" data-price="19999">Add to Cart</button>
+            </div>
+            <!-- Product 8 -->
+            <div class="product">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/a1aa/image/zIZM12R0fmxBGztHk4KF0n7TmPPlGTUo7R3oGesPdEg.jpg" alt="Withings Steel HR Sport">
+                    <i class="fas fa-heart heart-icon"></i>
+                </div>
+                <h2>Withings Steel HR Sport</h2>
+                <p class="price">₹15,999.00</p>
+                <p class="rating">★★★★★</p>
+                <button class="add-to-cart" data-name="Withings Steel HR Sport" data-price="15999">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to add items to the cart
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProductIndex = cart.findIndex(item => item.name === name);
+    
+            if (existingProductIndex > -1) {
+                // If the product already exists, increment the quantity
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                // If it's a new product, add it to the cart
+                cart.push({ name, price, quantity: 1 });
+            }
+    
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    
+        // Event listener for "Add to Cart" buttons
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const name = this.getAttribute('data-name');
+                const price = this.getAttribute('data-price');
+                addToCart(name, price);
+                alert(`${name} has been added to your cart!`);
+            });
+        });
+    </script>
+           
+</body>
+</html>

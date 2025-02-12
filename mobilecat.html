@@ -1,0 +1,270 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        .product-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .badge-custom {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .playback-badge {
+            background-color: #FFC107;
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .discount {
+            color: #28a745;
+        }
+        .line-through {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body class="bg-light p-4">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="h5 font-weight-bold">Filter By</div>
+            <div class="h5 font-weight-bold">Sort By: Featured</div>
+        </div>
+        <div class="row">
+            <!-- Product Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="imagshopecat/galaxybuds.png" class="card-img-top" alt="boAt Airdopes 131">
+                        <div class="badge badge-dark badge-custom">Engraving Available</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="ml-2 text-success">1447</span>
+                        </div>
+                        <h5 class="card-title mt-2">Galaxy Buds2 Pro</h5>
+                        <div class="h5 font-weight-bold mt-2">₹849 <span class="text-muted line-through">₹2,990</span> <span class="discount">72% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">13mm drivers</span>
+                            <span class="ml-2 text-muted">IWP Technology</span>
+                        </div>
+                        <div class="playback-badge mt-2">60 Hours Playback</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes 131" data-price="849">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="https://storage.googleapis.com/a1aa/image/YhSpKXIdvYHhrX56PXZhrOHOQ2hrsGLkAox2FPgyvC8.jpg" class="card-img-top" alt="boAt Airdopes 161">
+                        <div class="badge badge-dark badge-custom">Engraving Available</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="ml-2 text-success">442</span>
+                        </div>
+                        <h5 class="card-title mt-2">AirPods Pro (2nd Gen)</h5>
+                        <div class="h5 font-weight-bold mt-2">₹899 <span class="text-muted line-through">₹2,490</span> <span class="discount">64% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">ASAP™ Charge</span>
+                            <span class="ml-2 text-muted">IWP Technology</span>
+                        </div>
+                        <div class="playback-badge mt-2">40 Hours Playback</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes 161" data-price="899">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="https://storage.googleapis.com/a1aa/image/YEWn285s2DknKFoDzKTFVplvic41nc0XPmAU_PqtfXY.jpg" class="card-img-top" alt="boAt Airdopes ProGear">
+                        <div class="badge badge-success badge-custom">EXTRA ₹100 OFF</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="ml-2 text-success">26</span>
+                        </div>
+                        <h5 class="card-title mt-2">Nothing Ear (2)r</h5>
+                        <div class="h5 font-weight-bold mt-2">₹1,799 <span class="text-muted line-through">₹6,990</span> <span class="discount">74% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">15mm Drivers</span>
+                            <span class="ml-2 text-muted">Bluetooth v5.3</span>
+                            <span class="ml-2 text-muted">ENx™ Technology</span>
+                        </div>
+                        <div class="playback-badge mt-2">100 Hours Playback</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes ProGear" data-price="1799">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="https://storage.googleapis.com/a1aa/image/0bEF_-fCSTpnDt1aJtuaUXtlHcRtCVuki-ccoAksmGk.jpg" class="card-img-top" alt="boAt Airdopes Supreme">
+                        <div class="badge badge-danger badge-custom">New Launch</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="ml-2 text-success">118</span>
+                        </div>
+                        <h5 class="card-title mt-2">Noise – Buds X</h5>
+                        <div class="h5 font-weight-bold mt-2">₹1,199 <span class="text-muted line-through">₹5,990</span> <span class="discount">80% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">ENx™ Technology</span>
+                            <span class="ml-2 text-muted">In-ear Detection</span>
+                            <span class="ml-2 text-muted">Spatial Audio</span>
+                        </div>
+                        <div class="playback-badge mt-2">50 Hours Playback</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes Supreme" data-price="1199">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="https://storage.googleapis.com/a1aa/image/z0WJK9YRZo4VIIfQJQ8aHQ-P1WAlcHkriTG6_JJGh2s.jpg" class="card-img-top" alt="boAt Airdopes 800">
+                        <div class="badge badge-danger badge-custom">New Launch</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="ml-2 text-success">103</span>
+                        </div>
+                        <h5 class="card-title mt-2">Google – Pixel Buds Pro</h5>
+                        <div class="h5 font-weight-bold mt-2">₹1,799 <span class="text-muted line-through">₹6,490</span> <span class="discount">72% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">BEAST™ Mode</span>
+                            <span class="ml-2 text-muted">Powered by Dolby Audio</span>
+                        </div>
+                        <div class="playback-badge mt-2">Dolby Audio</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes 800" data-price="1799">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="https://storage.googleapis.com/a1aa/image/pZSf-crwIeKXc1dpIbmP_vLxpQPDbUgiNI5OfruVKcM.jpg" class="card-img-top" alt="boAt Airdopes 141 ANC">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="ml-2 text-success">35</span>
+                        </div>
+                        <h5 class="card-title mt-2">JBL – Live Pro 2 TWS</h5>
+                        <div class="h5 font-weight-bold mt-2">₹1,299 <span class="text-muted line-through">₹5,990</span> <span class="discount">78% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">42 Hours Playback</span>
+                            <span class="ml-2 text-muted">Dual EQ Modes</span>
+                            <span class="ml-2 text-muted">13mm Drivers</span>
+                        </div>
+                        <div class="playback-badge mt-2">Noise Cancellation</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes 141 ANC" data-price="1299">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="https://storage.googleapis.com/a1aa/image/O0nAeummYWDX1ItZ0xIoajhTJcqIbm1UDwyNZtFvYoo.jpg" class="card-img-top" alt="boAt Airdopes 161 ANC Elite">
+                        <div class="badge badge-danger badge-custom">New Launch</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="ml-2 text-success">36</span>
+                        </div>
+                        <h5 class="card-title mt-2">boAt Airdopes 161 ANC Elite</h5>
+                        <div class="h5 font-weight-bold mt-2">₹1,399 <span class="text-muted line-through">₹5,490</span> <span class="discount">80% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">42 Hours Playback</span>
+                            <span class="ml-2 text-muted">Dual EQ Modes</span>
+                            <span class="ml-2 text-muted">13mm Drivers</span>
+                        </div>
+                        <div class="playback-badge mt-2">Noise Cancellation</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes 161 ANC Elite" data-price="1399">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <div class="position-relative">
+                        <img src="https://storage.googleapis.com/a1aa/image/ukEQ-dqMWV_IFj-jCq1Px0TTcWWWTBzOD6y6y6zIRLc.jpg" class="card-img-top" alt="boAt Airdopes 131 Pro Buds">
+                        <div class="badge badge-dark badge-custom">Engraving Available</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="ml-2 text-success">749</span>
+                        </div>
+                        <h5 class="card-title mt-2">Marshall – Motif A.N.C.s</h5>
+                        <div class="h5 font-weight-bold mt-2">₹1,099 <span class="text-muted line-through">₹5,490</span> <span class="discount">80% off</span></div>
+                        <div class="d-flex mt-2">
+                            <span class="text-muted">42 Hours Playback</span>
+                            <span class="ml-2 text-muted">Dual EQ Modes</span>
+                            <span class="ml-2 text-muted">13mm Drivers</span>
+                        </div>
+                        <div class="playback-badge mt-2">Noise Cancellation</div>
+                        <button class="btn btn-dark btn-block mt-4 add-to-cart" data-name="boAt Airdopes 131 Pro Buds" data-price="1099">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+      <script>
+    // Function to add items to the cart
+    function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingProductIndex = cart.findIndex(item => item.name === name);
+
+        if (existingProductIndex > -1) {
+            // If the product already exists, increment the quantity
+            cart[existingProductIndex].quantity += 1;
+        } else {
+            // If it's a new product, add it to the cart
+            cart.push({ name, price, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Event listener for "Add to Cart" buttons
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const name = this.getAttribute('data-name');
+            const price = this.getAttribute('data-price');
+            addToCart(name, price);
+            alert(`${name} has been added to your cart!`);
+        });
+    });
+</script>
+       

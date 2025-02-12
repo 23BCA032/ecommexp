@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Chatbot</title>
+    <style>
+        /* Chatbot Floating Icon (Round) */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+        #chatbot-icon:hover {
+            background-color: #0056b3;
+        }
+
+        /* Chat Window */
+        #chat-window {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Chat Header */
+        #chat-header {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        /* Chat Body */
+        #chat-body {
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        /* Chat Messages */
+        .bot-message {
+            background: #f1f1f1;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Chat Buttons */
+        button {
+            display: block;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* Feedback Stars */
+        #stars span {
+            font-size: 24px;
+            cursor: pointer;
+            color: gray;
+        }
+        #stars span:hover, #stars span.active {
+            color: gold;
+        }
+
+        /* Hide Element */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Chatbot Icon (Round) -->
+    <div id="chatbot-icon" onclick="toggleChat()">
+        💬
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chat-window">
+        <div id="chat-header">
+            <span>Chat Support</span>
+            <button id="close-chat" onclick="toggleChat()">X</button>
+        </div>
+        <div id="chat-body">
+            <div id="chat-messages">
+                <p class="bot-message">👋 Welcome! How can I assist you?</p>
+            </div>
+
+            <!-- Chatbot Options -->
+            <div id="chat-options">
+                <button onclick="sendMessage('order-status')">📊 Order Status</button>
+                <button onclick="sendMessage('product-suggestions')">🛒 Product Suggestions</button>
+                <button onclick="sendMessage('warranty')">🏷️ Warranty & Refund</button>
+                <button onclick="sendMessage('feedback')">⭐ Give Feedback</button>
+                <button onclick="sendMessage('other-issue')">❓ Other Issues</button>
+            </div>
+
+            <!-- Feedback Section -->
+            <div id="feedback-section" class="hidden">
+                <p>⭐ Please rate your experience:</p>
+                <div id="stars">
+                    <span onclick="rate(1)">★</span>
+                    <span onclick="rate(2)">★</span>
+                    <span onclick="rate(3)">★</span>
+                    <span onclick="rate(4)">★</span>
+                    <span onclick="rate(5)">★</span>
+                </div>
+                <p id="feedback-result"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle chatbot window visibility
+        function toggleChat() {
+            const chatWindow = document.getElementById("chat-window");
+            chatWindow.style.display = chatWindow.style.display === "block" ? "none" : "block";
+        }
+
+        // Function to generate random responses
+        function getRandomMessage(type) {
+            const messages = {
+                "order-status": [
+                    "📦 Your order is being packed and will be shipped soon!",
+                    "🚚 Your order is out for delivery!",
+                    "📅 Estimated delivery in 2-3 days!"
+                ],
+                "warranty": [
+                    "🔖 You can claim a 1-year warranty from the purchase date!",
+                    "💰 Refund policy: You can return items within 30 days!"
+                ],
+                "other-issue": [
+                    "❓ Please describe your issue, and we’ll assist you!",
+                    "📞 Contact support at support@example.com."
+                ]
+            };
+            return messages[type][Math.floor(Math.random() * messages[type].length)];
+        }
+
+        // Function to fetch product suggestions (API Integration)
+        async function fetchProducts() {
+            try {
+                let response = await fetch("https://fakestoreapi.com/products/category/electronics");
+                let products = await response.json();
+
+                let randomProduct = products[Math.floor(Math.random() * products.length)];
+                return `🛒 Check out this product: ${randomProduct.title} - $${randomProduct.price}`;
+            } catch (error) {
+                return "⚠️ Error fetching product suggestions.";
+            }
+        }
+
+        // Function to send message and show response
+        async function sendMessage(type) {
+            const chatMessages = document.getElementById("chat-messages");
+
+            let userMessage = document.createElement("p");
+            userMessage.classList.add("bot-message");
+            userMessage.style.background = "#d1e7ff";
+            userMessage.innerText = "✅ " + document.querySelector(`button[onclick="sendMessage('${type}')"]`).innerText;
+            chatMessages.appendChild(userMessage);
+
+            setTimeout(async () => {
+                let botMessage = document.createElement("p");
+                botMessage.classList.add("bot-message");
+
+                if (type === "product-suggestions") {
+                    botMessage.innerText = await fetchProducts();
+                } else if (type === "feedback") {
+                    document.getElementById("feedback-section").classList.remove("hidden");
+                    return;
+                } else {
+                    botMessage.innerText = getRandomMessage(type);
+                }
+
+                chatMessages.appendChild(botMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Function to handle star rating
+        function rate(stars) {
+            let allStars = document.querySelectorAll("#stars span");
+            allStars.forEach((star, index) => {
+                star.classList.toggle("active", index < stars);
+            });
+            document.getElementById("feedback-result").innerText = `Thanks for rating us ${stars} stars! ⭐`;
+        }
+    </script>
+
+</body>
+</html>
